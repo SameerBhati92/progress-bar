@@ -1,6 +1,12 @@
+
+
 # ProgressBar
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.21.
+
+On the click of the Start Download button a dummy api is being called which is currently around 100mb. The amount of time it will take to load will be shown via progress bar.
+You can change this to any api.
+It will keep the UI blocked until the progress reaches 100%.
 
 ## Development server
 
