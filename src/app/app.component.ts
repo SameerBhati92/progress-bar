@@ -1,13 +1,14 @@
 import { Component, OnDestroy } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule, DecimalPipe } from '@angular/common';
+import { BulkUpdateComponent } from './bulk-update.component';
 import { DOWNLOAD_URL } from './download.service';
 import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule],
+  imports: [RouterOutlet, CommonModule, BulkUpdateComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
