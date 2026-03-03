@@ -1,0 +1,32 @@
+<div class="main-wrapper">
+  <h1>Progress Bar App</h1>
+  <div class="download-area">
+    <button
+      (click)="startDownload()"
+      class="button-primary"
+      [disabled]="running"
+    >
+      Start Download
+    </button>
+    <button (click)="cancel()" *ngIf="running">Cancel</button>
+    <div class="error" *ngIf="error">{{ error }}</div>
+  </div>
+</div>
+<router-outlet />
+
+<!-- Fullscreen blocking overlay shown while running -->
+<div class="progress-overlay" *ngIf="running">
+  <div class="overlay-inner">
+    <h2>Downloading…</h2>
+    <div class="progress">
+      <div class="progress-bar" [style.width.%]="percent"></div>
+    </div>
+    <div class="meta">
+      <span *ngIf="total"
+        >{{ percent }}% • {{ loaded | number }} / {{ total | number }}</span
+      >
+      <span *ngIf="!total">{{ loaded | number }} bytes</span>
+      <span *ngIf="eta"> • ETA: {{ eta }}</span>
+    </div>
+  </div>
+</div>

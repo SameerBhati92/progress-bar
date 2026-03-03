@@ -1,0 +1,9 @@
+{
+  "/download/*": {
+    "target": "https://nbg1-speed.hetzner.com",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": { "^/download": "" }
+  }
+}
