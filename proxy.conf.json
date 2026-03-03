@@ -5,5 +5,12 @@
     "changeOrigin": true,
     "logLevel": "debug",
     "pathRewrite": { "^/download": "" }
+  },
+  "/mock/*": {
+    "target": "http://localhost:3000",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": { "^/mock": "" }
   }
 }
